@@ -1,0 +1,22 @@
+{
+  "name": "express-workshop",
+  "version": "0.0.1",
+  "description": "Node.js workshop by Node Girls",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-girls/express-workshop.git"
+  },
+  "author": "Grigoriy Levanov <glevanov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-girls/express-workshop/issues"
+  },
+  "homepage": "https://github.com/node-girls/express-workshop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
