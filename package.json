@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/node-girls/express-workshop#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
