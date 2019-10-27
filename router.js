@@ -11,7 +11,6 @@ const router = app => {
     });
 
     app.post('/create-post', (req, res) => {
-        const postsPath = __dirname + '/data/posts.json';
         fs.readFile(postsPath, 'utf-8', (err, file) => {
             if (err) { console.log(err) }
             const posts = JSON.parse(file);
@@ -28,7 +27,14 @@ const router = app => {
     });
 
     app.get('/posts/:postId', function (req, res) {
-        res.send('post id: ' + req.params.postId);
+        const postID = req.params.postId;
+
+        fs.readFile(postsPath, 'utf-8', (err, file) => {
+            if (err) { console.log(err) }
+            const posts = JSON.parse(file);
+            const post = posts[postID];
+            res.render('post', { post });
+        });
     });
 };
 

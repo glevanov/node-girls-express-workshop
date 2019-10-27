@@ -64,15 +64,18 @@ function addBlogpostsToPage (data) {
             var postText        = document.createElement('p');
             var thumbnail       = document.createElement('img');
             var postContainer   = document.querySelector('.post-container');
+            var postLink         = document.createElement('a');
 
             thumbnail.src = "./img/logo2.png";
             thumbnail.className = "thumbnail";
             postText.innerHTML = data[blogpost];
             postDiv.className = "post";
+            postLink.href = "/posts/" + blogpost + "/";
 
             postDiv.appendChild(thumbnail);
             postDiv.appendChild(postText);
-            postContainer.appendChild(postDiv);
+            postLink.appendChild(postDiv)
+            postContainer.appendChild(postLink);
         }
     }
 }
